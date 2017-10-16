@@ -145,7 +145,7 @@ $cssgrid: false;
 %col{
 	box-sizing: border-box !important;
 	.content{
-		padding: grid(0.25); font-family: inherit;
+		padding: grid(0.25) !default; font-family: inherit !default;
 	}
 }
 //@include wildcard('col-'){ @extend %col; }
