@@ -1,0 +1,26 @@
+{
+  "name": "matise-grid",
+  "version": "1.0.1",
+  "description": "the Matise SCSS grid",
+  "main": "_grid.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiseAms/matise-grid.git"
+  },
+  "keywords": [
+    "matise",
+    "grid",
+    "scss",
+    "viewport",
+    "flexible"
+  ],
+  "author": "Matise",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatiseAms/matise-grid/issues"
+  },
+  "homepage": "https://github.com/MatiseAms/matise-grid#readme"
+}
