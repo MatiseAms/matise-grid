@@ -144,9 +144,7 @@ $cssgrid: false;
 
 %col{
 	box-sizing: border-box !important;
-
 }
-//@include wildcard('col-'){ @extend %col; }
 .col, .column, .columns{
 	@extend %col;
 	@include createGridClasses(false);
