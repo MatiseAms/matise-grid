@@ -36,3 +36,14 @@ $a: (
 		}
 	}
 }
+
+
+@each $color-name, $color-value in $colors{
+	$color-name-lowercase: to-lower-case($color-name);
+	.bg-#{$color-name}, .bg-#{$color-name-lowercase}{
+		background-color: $color-value; color: contra($color-value);
+	}
+	.color-#{$color-name}, .bg-#{$color-name-lowercase}{
+		color: color();
+	}
+}
