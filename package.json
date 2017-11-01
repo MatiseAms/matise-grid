@@ -5,7 +5,9 @@
 	"main": "_grid.scss",
 	"files": [
 		"css",
-		"scss"
+		"scss",
+		"grid-stack.scss",
+		"grid.scss",
 	],
 	"scripts": {
 		"build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
