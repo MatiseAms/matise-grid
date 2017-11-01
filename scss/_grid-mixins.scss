@@ -128,9 +128,10 @@
 		$column: #{$a}#{$childClass};
 		&.column-#{$column}{
 			width: #{$percentage};
-
-			@supports (display: grid){
-				width: #{$column}fr;
+			@if $grid-cssgrid{
+				@supports (display: grid){
+					width: #{$a}fr;
+				}
 			}
 		}
 		&.offset-#{$column}{
@@ -152,7 +153,7 @@
   			&%#{$part}#{$childClass},
   			&.#{$part}#{$childClass}{
 				width: percentage($percentage);
-				@if $cssgrid{
+				@if $grid-cssgrid == true{
 					@supports (display: grid){
 						$parts: $percentage * $grid-columns; width: #{$parts}fr;
 					}
@@ -196,7 +197,7 @@
 				&.#{$bp-name}-#{$part}#{$childClass}{
 					width: percentage($percentage);
 
-					@if $cssgrid{
+					@if $grid-cssgrid == true{
 						@supports (display: grid){
 							$parts: $percentage * $grid-columns; width: #{$parts}fr;
 						}
@@ -208,7 +209,7 @@
 
 				&.#{$bp-name}-#{$a}#{$childClass}{
 					width: $percentage;
-					@if $cssgrid{
+					@if $grid-cssgrid == true{
 						@supports (display: grid){
 							$parts: ($a/$grid-columns) * $grid-columns; //
 							width: auto; grid-column: #{$parts} span; border: 1px solid red;

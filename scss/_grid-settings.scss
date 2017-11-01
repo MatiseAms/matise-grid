@@ -4,6 +4,8 @@ $grid-row-width: 4096px !default; //
 $grid-design-width: 1920px !default; //
 $grid-columns: 24 !default; //
 $grid-screen: "only screen" !default; //
+$grid-cssgrid: false !default;
+
 $grid-breakpoints: (
   "small": 750,
   "medium": 960,

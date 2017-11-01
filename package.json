@@ -10,8 +10,10 @@
 		"grid.scss"
 	],
 	"scripts": {
-		"build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
+		"build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-duplicates && npm run build-cssnano",
 		"build-autoprefix": "postcss --use autoprefixer --map false --output css/grid.css css/grid.css",
+		"build-cssnano": "postcss --use cssnano --map false --output css/grid.min.css css/grid.min.css",
+		"build-duplicates": "postcss --use postcss-discard-duplicates --map false --output css/grid.min.css css/grid.css",
 		"build-clean": "rimraf css",
 		"build-sass": "node-sass --output-style expanded --source-map true grid.scss css/grid.css",
 		"deploy": "npm run stack-clean  &&  npm run build",
@@ -22,8 +24,10 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^7.1.1",
+		"cssnano": "^3.10.0",
 		"node-sass": "^4.5.3",
 		"postcss-cli": "^4.1.0",
+		"postcss-discard-duplicates": "^2.1.0",
 		"rimraf": "^2.6.1"
 	},
 	"repository": {

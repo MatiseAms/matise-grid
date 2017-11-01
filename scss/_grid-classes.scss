@@ -1,10 +1,9 @@
 
-$cssgrid: false;
 
 .row{
 	max-width: $grid-row-width; width: 100%; margin: auto; @include createGridClasses(true); display: flex; justify-content: flex-start; flex-flow: row wrap;
 
-	@if $cssgrid{
+	@if $grid-cssgrid{
 		@supports (display: grid){
 			display: grid; //
 			grid-template-columns: repeat($grid-columns, 1fr); //
@@ -14,7 +13,7 @@ $cssgrid: false;
 	&.center{
 		justify-items: center; justify-content: center;
 
-		@if $cssgrid{
+		@if $grid-cssgrid{
 			>.column{
 				align-self: center; justify-self: center;
 			}
@@ -23,7 +22,7 @@ $cssgrid: false;
 	&.right{
 		justify-items: right; justify-content: flex-end;
 
-		@if $cssgrid{
+		@if $grid-cssgrid{
 			>.column{
 				align-self: right; justify-self: right;
 			}
