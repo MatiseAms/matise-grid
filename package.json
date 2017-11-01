@@ -1,26 +1,49 @@
 {
-  "name": "matise-grid",
-  "version": "1.0.5",
-  "description": "the Matise SCSS grid",
-  "main": "_grid.scss",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MatiseAms/matise-grid.git"
-  },
-  "keywords": [
-    "matise",
-    "grid",
-    "scss",
-    "viewport",
-    "flexible"
-  ],
-  "author": "Matise",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MatiseAms/matise-grid/issues"
-  },
-  "homepage": "https://github.com/MatiseAms/matise-grid#readme"
+	"name": "matise-grid",
+	"version": "1.0.5",
+	"description": "the Matise SCSS grid",
+	"main": "_grid.scss",
+	"files": [
+		"css",
+		"scss"
+	],
+	"scripts": {
+		"build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
+		"build-autoprefix": "postcss --use autoprefixer --map false --output css/grid.css css/grid.css",
+		"build-clean": "rimraf css",
+		"build-sass": "node-sass --output-style expanded --source-map true grid.scss css/grid.css",
+		"deploy": "npm run stack-clean  &&  npm run build",
+		"start": "npm run build-sass -- --watch",
+		"stack-sass": "node-sass --output-style expanded --source-map true grid-stack.scss temp/grid-stack.css",
+		"stack-clean": "rimraf temp",
+		"stack": "npm run stack-sass"
+	},
+	"devDependencies": {
+		"autoprefixer": "^7.1.1",
+		"node-sass": "^4.5.3",
+		"postcss-cli": "^4.1.0",
+		"rimraf": "^2.6.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MatiseAms/matise-grid.git"
+	},
+	"keywords": [
+		"css",
+		"sass",
+		"flexbox",
+		"responsive",
+		"framework",
+		"matise",
+		"grid",
+		"scss",
+		"viewport",
+		"flexible"
+	],
+	"author": "Matise",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MatiseAms/matise-grid/issues"
+	},
+	"homepage": "https://github.com/MatiseAms/matise-grid#readme"
 }
