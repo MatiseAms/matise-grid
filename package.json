@@ -18,6 +18,9 @@
 		"build-sass": "node-sass --output-style expanded --source-map true grid.scss css/grid.css",
 		"deploy": "npm run stack-clean  &&  npm run build",
 		"start": "npm run build-sass -- --watch",
+		"basic": "node-sass --output-style expanded --source-map true grid-basic.scss css/grid.basic.css && npm run basic-duplicates && npm run basic-cssnano",
+		"basic-cssnano": "postcss --use cssnano --map false --output css/grid.basic.min.css css/grid.basic.min.css",
+		"basic-duplicates": "postcss --use postcss-discard-duplicates --map false --output css/grid.basic.min.css css/grid.basic.css",
 		"stack-sass": "node-sass --output-style expanded --source-map true grid-stack.scss temp/grid-stack.css",
 		"stack-clean": "rimraf temp",
 		"stack": "npm run stack-sass"

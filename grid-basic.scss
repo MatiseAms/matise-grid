@@ -1,0 +1,23 @@
+@import
+	"scss/grid-settings",
+	"scss/grid-functions",
+	"scss/grid-mixins";
+	
+.row{
+	max-width: $grid-row-width; width: 100%; margin: auto; @include createGridClasses(true); display: flex; justify-content: flex-start; flex-flow: row wrap;
+	&.center{
+		justify-items: center; justify-content: center;
+	}
+	&.right{
+		justify-items: right; justify-content: flex-end;
+	}
+}
+
+.column{	box-sizing: border-box !important;
+	@include createGridClasses(false);
+}
+
+@import
+	"scss/grid-media-queries",
+	"scss/grid-media-queries-classes",
+	"scss/grid-variables";	
