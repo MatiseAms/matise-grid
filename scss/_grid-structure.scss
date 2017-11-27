@@ -11,7 +11,7 @@
 					} @else{
 						$className: #{$pre}#{$method}-#{$action}-#{$v};
 					}
-					.#{$className}{
+					.#{$prefix}#{$className}{
 						// Set if its columns (percentage) or grid (relative to viewport)
 						$margin: "";
 						@if $method == "grid"{
@@ -21,10 +21,10 @@
 						}
 						// Create classes with minus for pull or + for else/push
 						@if $action == "pull"{
-						  #{$direction}: -#{$margin};
-            } @else {
-              #{$direction}: #{$margin};
-            }
+							#{$direction}: -#{$margin};
+						} @else{
+							#{$direction}: #{$margin};
+						}
 					}
 				}
 			}

@@ -1,12 +1,11 @@
+$prefix: "" !default;
 
 /*  Grid Specific values */
 $grid-row-width: 4096px !default; //
 $grid-design-width: 1920px !default; //
 $grid-columns: 24 !default; //
 $grid-screen: "only screen" !default; //
-$grid-cssgrid: false !default;
-
-$grid-breakpoints: (
+$grid-cssgrid: false !default; $grid-breakpoints: (
   "small": 750,
   "medium": 960,
   "large": 1280,
@@ -26,7 +25,7 @@ $grid-parts: (
   "four-fifth": 4/5,
   "sixth": 1/6,
   "five-sixth": 5/6
-) !default; 
+) !default;
 //
 $create-classes-column: true !default; //
 $create-classes-column-pull: true !default; //
