@@ -1,0 +1,10 @@
+/*  Grid Specific values */
+/* Default use:
+  @include min-(width,4,240);
+
+  use width calculation
+  @include min-(width,4,240,'calc(100% - 240px)');
+*/
+/* Generate the classes */
+
+/*# sourceMappingURL=output.css.map */
