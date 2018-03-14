@@ -1,23 +1,26 @@
-@import
-	"scss/grid-settings",
-	"scss/grid-functions",
-	"scss/grid-mixins";
-	
-.#{$prefix}row{
-	max-width: $grid-row-width; width: 100%; margin: auto; @include createGridClasses(true); display: flex; justify-content: flex-start; flex-flow: row wrap;
-	&.#{$prefix}center{
-		justify-items: center; justify-content: center;
+@import 'scss/settings', 'scss/functions', 'scss/mixins';
+
+.#{$prefix}row {
+	max-width: $row-width;
+	width: 100%;
+	margin: auto;
+	@include createGridClasses(true);
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+	&.#{$prefix}center {
+		justify-items: center;
+		justify-content: center;
 	}
-	&.#{$prefix}right{
-		justify-items: right; justify-content: flex-end;
+	&.#{$prefix}right {
+		justify-items: right;
+		justify-content: flex-end;
 	}
 }
 
-.#{$prefix}column{	box-sizing: border-box !important;
+.#{$prefix}column {
+	box-sizing: border-box !important;
 	@include createGridClasses(false);
 }
 
-@import
-	"scss/grid-media-queries",
-	"scss/grid-media-queries-classes",
-	"scss/grid-variables";	
+@import 'scss/media-queries', 'scss/media-queries-classes', 'scss/variables';

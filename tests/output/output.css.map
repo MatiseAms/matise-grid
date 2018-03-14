@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"file": "output.css",
+	"sources": [
+		"../index.scss",
+		"../../grid-stack.scss",
+		"../../scss/_settings.scss",
+		"../../scss/_functions.scss",
+		"../../scss/functions/_index.scss",
+		"../../scss/functions/_units.scss",
+		"../../scss/_mixins.scss",
+		"../../scss/_media-queries.scss",
+		"../../scss/_variables.scss",
+		"../units/_unit.scss"
+	],
+	"names": [],
+	"mappings": "AEEA,2BAA2B;AIkE3B;;;;;EAKE;AAsEF,0BAA0B"
+}

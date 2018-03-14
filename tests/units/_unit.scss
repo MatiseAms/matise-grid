@@ -1,0 +1,21 @@
+// Check strip-unit
+
+$warnings: ();
+
+@if strip-unit(1px) != 1 {
+	$message: "strip unit isn't working properly";
+	$warnings: prepend($warnings, $message);
+	@warn $message;
+}
+
+@if unit(1px) != 'px' {
+	$message: "unit isn't working properly";
+	$warnings: prepend($warnings, $message);
+	@warn $message;
+}
+
+@if grid(1) != '4.16667vw' {
+	$message: "Grid function isn't working properly";
+	$warnings: prepend($warnings, $message);
+	@warn $message;
+}
