@@ -124,7 +124,7 @@
 		$childClass: "> .#{$prefix}column";
 	}
 	@for $a from 0 through $grid-columns{
-		$percentage: percentage($a/$grid-columns); //
+		$percentage: percentage(to-number($a)/to-number($grid-columns)); //
 		$column: #{$a}#{$childClass};
 		&.#{$prefix}column-#{$column}{
 			width: #{$percentage};
@@ -152,7 +152,7 @@
 		@each $part,$percentage in $grid-parts{
   			&%#{$part}#{$childClass},
   			&.#{$prefix}#{$part}#{$childClass}{
-				width: percentage($percentage);
+				width: percentage(to-number($percentage));
 				@if $grid-cssgrid == true{
 					@supports (display: grid){
 						$parts: $percentage * $grid-columns; width: #{$parts}fr;
