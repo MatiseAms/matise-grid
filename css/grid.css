@@ -1,7 +1,6 @@
 /*  Grid Specific values */
 /* Default use:
   @include min-(width,4,240);
-
   use width calculation
   @include min-(width,4,240,'calc(100% - 240px)');
 */
@@ -10,9 +9,16 @@
   max-width: 4096px;
   width: 100%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .row.column-0 > .column {
@@ -3887,16 +3893,21 @@
 
 .row.center {
   justify-items: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .row.right {
   justify-items: right;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .col, .column, .columns {
-  box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 .col.column-0, .column.column-0, .columns.column-0 {
@@ -9532,5 +9543,4 @@
     display: none;
   }
 }
-
 /*# sourceMappingURL=grid.css.map */
